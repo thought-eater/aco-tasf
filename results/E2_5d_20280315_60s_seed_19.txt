@@ -1,0 +1,83 @@
+﻿==========================================
+Tasf.B2B - Ant Colony Optimization
+Real input mode
+==========================================
+Airports : C:\Users\andre\Downloads\aco-tasf\data\aeropuertos.txt
+Flights  : C:\Users\andre\Downloads\aco-tasf\data\planes_vuelo.txt
+Shipments: C:\Users\andre\Downloads\aco-tasf\data\_envios_preliminar_.zip
+Earliest shipment date found: 2026-01-02
+
+=== SCENARIO E2: Period Simulation ===
+Requested horizon: 2028-03-15 to 2028-03-19 (5 days)
+
+Requested cancellations: 0
+
+Aggregation enabled: raw=66607 -> planning=66073 (batch size 25)
+Loaded demand:
+  Days loaded: 5
+  Raw requests: 66607 | Suitcases: 121247
+  Planning requests: 66073 | Suitcases: 121247
+  2028-03-15 -> requests=12833, suitcases=24207
+  2028-03-16 -> requests=14855, suitcases=24207
+  2028-03-17 -> requests=10628, suitcases=24207
+  2028-03-18 -> requests=15127, suitcases=24313
+  2028-03-19 -> requests=13164, suitcases=24313
+
+=== ACO (Ant Colony Optimization) started ===
+Planning requests: 66073, Airports: 30, Flight schedules: 2866, Ants: 10
+Parameters: alpha=1.0, beta=3.0, rho=0.12, Q=150.0
+Iter 1, Ant 1: NEW BEST fitness=30631773.61, late=1545
+Iter 1, Ant 3: NEW BEST fitness=30233816.32, late=1528
+Iter 1, Ant 6: NEW BEST fitness=29788675.62, late=1511
+Time limit reached at iteration 3
+=== ACO finished ===
+Iterations: 2, Improvements: 3, Time: 60947 ms
+Best solution: Solution [requests=66073, suitcases=121247, delivered=119767, late=1511, undelivered=1480, fitness=29788675.62]
+Semaphore status: GREEN
+
+========== ACO REPORT ==========
+Algorithm:         Ant Colony Optimization (MMAS)
+Parameters:        alpha=1.0, beta=3.0, rho=0.12, Q=150.0, ants=10
+Iterations run:    2
+Improvements:      3
+Total requests:    66073
+Total suitcases:   121247
+Delivered:         119767
+Undelivered:       1480
+Late suitcases:    1511
+Total delay:       11.76 days
+Capacity overflow: 0
+Warehouse overflow:313
+Fitness:           29788675.62
+Semaphore:         GREEN
+
+--- Route details (first 20) ---
+  AGG-VIDP-LBSF-1157461-001: VIDP --(VIDP-LBSF-04:01)--> LBSF [transit=0.43, deadline=2.0, ON_TIME]
+  AGG-VIDP-EBCI-1157470-001: VIDP --(VIDP-EBCI-00:26)--> EBCI [transit=0.35, deadline=2.0, ON_TIME]
+  AGG-VIDP-OMDB-1157470-001: VIDP --(VIDP-OMDB-03:38)--> OMDB [transit=0.26, deadline=1.0, ON_TIME]
+  AGG-VIDP-OJAI-1157481-001: VIDP --(VIDP-OAKB-01:20)--> OAKB --(OAKB-OJAI-05:12)--> OJAI [transit=0.41, deadline=1.0, ON_TIME]
+  AGG-OPKC-EBCI-1157487-001: OPKC --(OPKC-LBSF-04:16)--> LBSF --(LBSF-EBCI-09:05)--> EBCI [transit=0.53, deadline=2.0, ON_TIME]
+  AGG-VIDP-EHAM-1157487-001: VIDP --(VIDP-EHAM-03:19)--> EHAM [transit=0.46, deadline=2.0, ON_TIME]
+  AGG-VIDP-SCEL-1157489-001: VIDP --(VIDP-OAKB-01:20)--> OAKB --(OAKB-SCEL-13:26)--> SCEL [transit=1.43, deadline=2.0, ON_TIME]
+  AGG-VIDP-SKBO-1157493-001: VIDP --(VIDP-OAKB-01:20)--> OAKB --(OAKB-UMMS-06:21)--> UMMS --(UMMS-SKBO-10:52)--> SKBO [transit=1.06, deadline=2.0, ON_TIME]
+  AGG-VIDP-SVMI-1157501-001: VIDP --(VIDP-SVMI-03:36)--> SVMI [transit=0.87, deadline=2.0, ON_TIME]
+  AGG-VIDP-LOWW-1157506-001: VIDP --(VIDP-LOWW-01:39)--> LOWW [transit=0.33, deadline=2.0, ON_TIME]
+  AGG-VIDP-UBBB-1157511-001: VIDP --(VIDP-OAKB-01:20)--> OAKB --(OAKB-UBBB-05:48)--> UBBB [transit=0.34, deadline=1.0, ON_TIME]
+  AGG-OPKC-SCEL-1157514-001: OPKC --(OPKC-OAKB-01:00)--> OAKB --(OAKB-EKCH-01:32)--> EKCH --(EKCH-SCEL-13:53)--> SCEL [transit=1.32, deadline=2.0, ON_TIME]
+  AGG-VIDP-EHAM-1157514-001: VIDP --(VIDP-EHAM-03:19)--> EHAM [transit=0.44, deadline=2.0, ON_TIME]
+  AGG-OAKB-SVMI-1157520-001: OAKB --(OAKB-OOMS-00:03)--> OOMS --(OOMS-OSDI-02:10)--> OSDI --(OSDI-SVMI-06:16)--> SVMI [transit=0.85, deadline=2.0, ON_TIME]
+  AGG-OAKB-SKBO-1157521-001: OAKB --(OAKB-VIDP-03:26)--> VIDP --(VIDP-SKBO-10:02)--> SKBO [transit=1.18, deadline=2.0, ON_TIME]
+  AGG-VIDP-OAKB-1157521-001: VIDP --(VIDP-OAKB-01:20)--> OAKB [transit=0.07, deadline=1.0, ON_TIME]
+  AGG-OAKB-SABE-1157522-001: OAKB --(OAKB-OOMS-00:03)--> OOMS --(OOMS-SABE-04:36)--> SABE [transit=0.91, deadline=2.0, ON_TIME]
+  AGG-OMDB-SLLP-1157523-001: OMDB --(OMDB-OERK-01:27)--> OERK --(OERK-OAKB-02:16)--> OAKB --(OAKB-SLLP-17:08)--> SLLP [transit=1.51, deadline=2.0, ON_TIME]
+  AGG-OAKB-LKPR-1157525-001: OAKB --(OAKB-LKPR-10:51)--> LKPR [transit=0.70, deadline=2.0, ON_TIME]
+  AGG-VIDP-SGAS-1157526-001: VIDP --(VIDP-OAKB-01:20)--> OAKB --(OAKB-SGAS-03:06)--> SGAS [transit=0.90, deadline=2.0, ON_TIME]
+  ... 66053 routes more
+
+--- Convergence ---
+  Initial best:   29788675.62
+  Final best:     29788675.62
+  Initial avg:    31225218.37
+  Final avg:      32329498.33
+========================================
+

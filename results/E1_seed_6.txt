@@ -1,0 +1,79 @@
+==========================================
+Tasf.B2B - Ant Colony Optimization
+Real input mode
+==========================================
+Airports : C:\Users\andre\Downloads\aco-tasf\data\aeropuertos.txt
+Flights  : C:\Users\andre\Downloads\aco-tasf\data\planes_vuelo.txt
+Shipments: C:\Users\andre\Downloads\aco-tasf\data\_envios_preliminar_.zip
+Earliest shipment date found: 2026-01-02
+
+=== SCENARIO E1: Real-Time Daily Operations ===
+Selected date: 2026-01-02
+
+Requested cancellations: 0
+
+Loaded demand:
+  Days loaded: 1
+  Raw requests: 488 | Suitcases: 690
+  Planning requests: 488 | Suitcases: 690
+  2026-01-02 -> requests=488, suitcases=690
+
+=== ACO (Ant Colony Optimization) started ===
+Planning requests: 488, Airports: 30, Flight schedules: 2866, Ants: 8
+Parameters: alpha=1.0, beta=3.2, rho=0.15, Q=120.0
+Iter 1, Ant 1: NEW BEST fitness=120000.00, late=6
+Iter 1, Ant 7: NEW BEST fitness=80000.00, late=4
+Iter 2, Ant 2: NEW BEST fitness=60000.00, late=3
+Iter 17, Ant 8: NEW BEST fitness=20000.00, late=1
+Time limit reached at iteration 31
+=== ACO finished ===
+Iterations: 30, Improvements: 4, Time: 5153 ms
+Best solution: Solution [requests=488, suitcases=690, delivered=689, late=1, undelivered=1, fitness=20000.00]
+Semaphore status: GREEN
+
+========== ACO REPORT ==========
+Algorithm:         Ant Colony Optimization (MMAS)
+Parameters:        alpha=1.0, beta=3.2, rho=0.15, Q=120.0, ants=8
+Iterations run:    30
+Improvements:      4
+Total requests:    488
+Total suitcases:   690
+Delivered:         689
+Undelivered:       1
+Late suitcases:    1
+Total delay:       0.00 days
+Capacity overflow: 0
+Warehouse overflow:0
+Fitness:           20000.00
+Semaphore:         GREEN
+
+--- Route details (first 20) ---
+  000000001: OPKC --(OPKC-EDDI-02:09)--> EDDI [transit=0.34, deadline=2.0, ON_TIME]
+  000000001: VIDP --(VIDP-OSDI-01:50)--> OSDI [transit=0.25, deadline=1.0, ON_TIME]
+  000000002: OPKC --(OPKC-OMDB-02:28)--> OMDB --(OMDB-OSDI-04:18)--> OSDI --(OSDI-SLLP-12:49)--> SLLP [transit=1.19, deadline=2.0, ON_TIME]
+  000000001: OAKB --(OAKB-LKPR-10:51)--> LKPR [transit=0.67, deadline=2.0, ON_TIME]
+  000000001: OOMS --(OOMS-OMDB-01:13)--> OMDB --(OMDB-SLLP-05:28)--> SLLP [transit=0.93, deadline=2.0, ON_TIME]
+  000000002: VIDP --(VIDP-UMMS-07:49)--> UMMS [transit=0.50, deadline=2.0, ON_TIME]
+  000000001: OMDB --(OMDB-OJAI-02:58)--> OJAI [transit=0.18, deadline=1.0, ON_TIME]
+  000000003: OPKC --(OPKC-SGAS-04:19)--> SGAS [transit=0.84, deadline=2.0, ON_TIME]
+  000000002: OAKB --(OAKB-VIDP-03:26)--> VIDP [transit=0.13, deadline=1.0, ON_TIME]
+  000000002: OOMS --(OOMS-SABE-06:31)--> SABE [transit=0.92, deadline=2.0, ON_TIME]
+  000000003: VIDP --(VIDP-OOMS-08:14)--> OOMS --(OOMS-OPKC-15:57)--> OPKC [transit=0.64, deadline=1.0, ON_TIME]
+  000000001: LBSF --(LBSF-OAKB-01:08)--> OAKB [transit=0.22, deadline=2.0, ON_TIME]
+  000000001: OERK --(OERK-LKPR-19:47)--> LKPR [transit=1.00, deadline=2.0, ON_TIME]
+  000000001: UMMS --(UMMS-LATI-04:30)--> LATI [transit=0.23, deadline=1.0, ON_TIME]
+  000000001: OSDI --(OSDI-SKBO-08:47)--> SKBO --(SKBO-SCEL-19:18)--> SCEL [transit=1.31, deadline=2.0, ON_TIME]
+  000000004: OPKC --(OPKC-SUAA-04:03)--> SUAA [transit=0.80, deadline=2.0, ON_TIME]
+  000000001: OYSN --(OYSN-EHAM-07:27)--> EHAM [transit=0.55, deadline=2.0, ON_TIME]
+  000000003: OOMS --(OOMS-VIDP-05:33)--> VIDP [transit=0.24, deadline=1.0, ON_TIME]
+  000000001: OJAI --(OJAI-SBBR-09:08)--> SBBR [transit=0.85, deadline=2.0, ON_TIME]
+  000000003: OAKB --(OAKB-UBBB-05:48)--> UBBB [transit=0.24, deadline=1.0, ON_TIME]
+  ... 468 routes more
+
+--- Convergence ---
+  Initial best:   80000.00
+  Final best:     20000.00
+  Initial avg:    147500.00
+  Final avg:      152500.00
+========================================
+

@@ -1,0 +1,62 @@
+﻿started 2026-05-03T16:26:32.1782887-05:00
+running replica=1 seed=1 start=2026-05-03T16:26:32.1913221-05:00
+done replica=1 seed=1 fitness=30234413.96 time=62257 ms end=2026-05-03T16:27:42.2414069-05:00
+running replica=2 seed=2 start=2026-05-03T16:27:42.2524127-05:00
+done replica=2 seed=2 fitness=30483221.25 time=62151 ms end=2026-05-03T16:28:51.2903129-05:00
+running replica=3 seed=3 start=2026-05-03T16:28:51.2908132-05:00
+done replica=3 seed=3 fitness=30010351.74 time=63315 ms end=2026-05-03T16:30:01.3313548-05:00
+running replica=4 seed=4 start=2026-05-03T16:30:01.3323568-05:00
+done replica=4 seed=4 fitness=29517556.53 time=62796 ms end=2026-05-03T16:31:10.8397691-05:00
+running replica=5 seed=5 start=2026-05-03T16:31:10.8407704-05:00
+done replica=5 seed=5 fitness=28201728.75 time=61399 ms end=2026-05-03T16:32:19.0311475-05:00
+running replica=6 seed=6 start=2026-05-03T16:32:19.0316481-05:00
+done replica=6 seed=6 fitness=30674186.88 time=62343 ms end=2026-05-03T16:33:28.0051406-05:00
+running replica=7 seed=7 start=2026-05-03T16:33:28.0061441-05:00
+done replica=7 seed=7 fitness=30322514.86 time=61932 ms end=2026-05-03T16:34:37.1057605-05:00
+running replica=8 seed=8 start=2026-05-03T16:34:37.1067659-05:00
+done replica=8 seed=8 fitness=29255472.01 time=61981 ms end=2026-05-03T16:35:45.9319627-05:00
+running replica=9 seed=9 start=2026-05-03T16:35:45.9329630-05:00
+done replica=9 seed=9 fitness=30251394.10 time=61999 ms end=2026-05-03T16:36:54.8897365-05:00
+running replica=10 seed=10 start=2026-05-03T16:36:54.8912372-05:00
+done replica=10 seed=10 fitness=29892898.26 time=62833 ms end=2026-05-03T16:38:04.5181880-05:00
+running replica=11 seed=11 start=2026-05-03T16:38:04.5196998-05:00
+done replica=11 seed=11 fitness=29601155.21 time=61933 ms end=2026-05-03T16:39:13.2326024-05:00
+running replica=12 seed=12 start=2026-05-03T16:39:13.2331090-05:00
+done replica=12 seed=12 fitness=30085929.38 time=61389 ms end=2026-05-03T16:40:21.2049877-05:00
+running replica=13 seed=13 start=2026-05-03T16:40:21.2059872-05:00
+done replica=13 seed=13 fitness=30471807.08 time=61740 ms end=2026-05-03T16:41:29.6658171-05:00
+running replica=14 seed=14 start=2026-05-03T16:41:29.6673304-05:00
+done replica=14 seed=14 fitness=30009170.07 time=61953 ms end=2026-05-03T16:42:38.4762045-05:00
+running replica=15 seed=15 start=2026-05-03T16:42:38.4777108-05:00
+done replica=15 seed=15 fitness=30446764.51 time=63126 ms end=2026-05-03T16:43:48.5680015-05:00
+running replica=16 seed=16 start=2026-05-03T16:43:48.5680015-05:00
+done replica=16 seed=16 fitness=30209243.82 time=62008 ms end=2026-05-03T16:44:57.0941934-05:00
+running replica=17 seed=17 start=2026-05-03T16:44:57.0951936-05:00
+done replica=17 seed=17 fitness=29605704.65 time=61697 ms end=2026-05-03T16:46:05.8628671-05:00
+running replica=18 seed=18 start=2026-05-03T16:46:05.8658664-05:00
+done replica=18 seed=18 fitness=31330422.29 time=60927 ms end=2026-05-03T16:47:13.5956028-05:00
+running replica=19 seed=19 start=2026-05-03T16:47:13.5971095-05:00
+done replica=19 seed=19 fitness=29788675.62 time=60947 ms end=2026-05-03T16:48:21.3648429-05:00
+running replica=20 seed=20 start=2026-05-03T16:48:21.3653431-05:00
+done replica=20 seed=20 fitness=29770930.42 time=60942 ms end=2026-05-03T16:49:28.9633465-05:00
+running replica=21 seed=21 start=2026-05-03T16:49:28.9775589-05:00
+done replica=21 seed=21 fitness=30688568.40 time=85080 ms end=2026-05-03T16:51:00.4101197-05:00
+running replica=22 seed=22 start=2026-05-03T16:51:00.4106182-05:00
+done replica=22 seed=22 fitness=29482455.63 time=85548 ms end=2026-05-03T16:52:32.2653211-05:00
+running replica=23 seed=23 start=2026-05-03T16:52:32.2658234-05:00
+done replica=23 seed=23 fitness=30443504.10 time=85507 ms end=2026-05-03T16:54:04.2404138-05:00
+running replica=24 seed=24 start=2026-05-03T16:54:04.2409136-05:00
+done replica=24 seed=24 fitness=30150816.39 time=86881 ms end=2026-05-03T16:55:37.4407419-05:00
+running replica=25 seed=25 start=2026-05-03T16:55:37.4417423-05:00
+done replica=25 seed=25 fitness=29804826.74 time=87783 ms end=2026-05-03T16:57:11.5770047-05:00
+running replica=26 seed=26 start=2026-05-03T16:57:11.5780048-05:00
+done replica=26 seed=26 fitness=29555107.92 time=85759 ms end=2026-05-03T16:58:43.8129653-05:00
+running replica=27 seed=27 start=2026-05-03T16:58:43.8134663-05:00
+done replica=27 seed=27 fitness=29669472.36 time=87630 ms end=2026-05-03T17:00:17.8025742-05:00
+running replica=28 seed=28 start=2026-05-03T17:00:17.8030722-05:00
+done replica=28 seed=28 fitness=29362095.49 time=84915 ms end=2026-05-03T17:01:48.8719276-05:00
+running replica=29 seed=29 start=2026-05-03T17:01:48.8729264-05:00
+done replica=29 seed=29 fitness=28730317.36 time=90283 ms end=2026-05-03T17:03:25.4620110-05:00
+running replica=30 seed=30 start=2026-05-03T17:03:25.4645123-05:00
+done replica=30 seed=30 fitness=29871062.15 time=62369 ms end=2026-05-03T17:04:34.7197796-05:00
+finished 2026-05-03T17:04:34.7444530-05:00
