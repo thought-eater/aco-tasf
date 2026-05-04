@@ -161,6 +161,18 @@ public class ACOSolver {
             }
         }
 
+        if (bestSolution != null
+                && Boolean.parseBoolean(System.getProperty("tasf.repairWarehouse", "false"))) {
+            WarehouseRepair repair = new WarehouseRepair(network, config);
+            Solution repaired = repair.repair(bestSolution);
+            if (repaired != null && repaired.getFitness() < bestFitness) {
+                bestSolution = repaired.copy();
+                bestFitness = bestSolution.getFitness();
+                improvementCount++;
+                fitnessHistory.add(bestFitness);
+            }
+        }
+
         long elapsed = System.currentTimeMillis() - startTimeMs;
         System.out.println("=== ACO finished ===");
         System.out.printf("Iterations: %d, Improvements: %d, Time: %d ms%n",
