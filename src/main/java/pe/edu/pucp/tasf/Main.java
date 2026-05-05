@@ -314,19 +314,19 @@ public class Main {
     }
 
     private static ACOConfig buildPeriodConfig(int requestCount, int days) {
-        int ants = requestCount <= 300 ? 20 : requestCount <= 1_500 ? 14 : 10;
-        int iterations = requestCount <= 300 ? 180 : requestCount <= 1_500 ? 120 : 80;
-        long timeLimitMs = Long.getLong("tasf.timeLimitMs", Math.max(90_000L, days * 90_000L));
+        int ants = 20;
+        int iterations = 10_000;
+        long timeLimitMs = Long.getLong("tasf.timeLimitMs", 900_000L);
 
         return new ACOConfig()
-                .maxIterations(Integer.getInteger("tasf.iterations", iterations))
-                .antCount(Integer.getInteger("tasf.ants", ants))
-                .alpha(Double.parseDouble(System.getProperty("tasf.alpha", "1.0")))
-                .beta(Double.parseDouble(System.getProperty("tasf.beta", "3.0")))
-                .rho(Double.parseDouble(System.getProperty("tasf.rho", "0.12")))
-                .Q(Double.parseDouble(System.getProperty("tasf.Q", "150.0")))
-                .elitistAnts(Integer.getInteger("tasf.elitistAnts", 3))
-                .maxHops(Integer.getInteger("tasf.maxHops", 4))
+                .maxIterations(iterations)
+                .antCount(ants)
+                .alpha(1.0)
+                .beta(4.5)
+                .rho(0.18)
+                .Q(150.0)
+                .elitistAnts(5)
+                .maxHops(10)
                 .timeLimitMs(timeLimitMs)
                 .seed(Long.getLong("tasf.seed", 42L));
     }

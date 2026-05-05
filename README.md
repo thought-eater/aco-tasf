@@ -116,18 +116,32 @@ java ^
   -cp target/classes pe.edu.pucp.tasf.Main E2 5 20260102 2
 ```
 
-Tambien se puede ajustar la ejecucion:
+Para experimentacion numerica, la semilla se puede variar sin cambiar el modelo:
 
 ```bash
 java ^
-  -Dtasf.timeLimitMs=5000 ^
-  -Dtasf.ants=12 ^
-  -Dtasf.iterations=80 ^
   -Dtasf.seed=42 ^
-  -Dtasf.aggregateThreshold=2000 ^
-  -Dtasf.aggregateBatchSize=25 ^
-  -cp target/classes pe.edu.pucp.tasf.Main E2 5 20260102 2
+  -cp target/classes pe.edu.pucp.tasf.Main E2 5 20280215 0
 ```
+
+### Parametros ACO fijados para E2
+
+El escenario de periodo (`E2`) usa una configuracion fija del ACO hibrido para que las replicas sean comparables:
+
+- variante: MMAS con refuerzo elitista y reparacion de almacenes
+- hormigas: 20
+- iteraciones maximas: 10000
+- limite de tiempo: 900000 ms
+- alpha: 1.0
+- beta: 4.5
+- rho: 0.18
+- Q: 150.0
+- hormigas elitistas: 5
+- maxHops: 10
+- tau inicial: 1.0
+- tau min / max: 0.1 / 10.0
+- reparacion de almacenes: activa por defecto
+- parada temprana: si `fitness = 0`
 
 ## Notas de escala
 

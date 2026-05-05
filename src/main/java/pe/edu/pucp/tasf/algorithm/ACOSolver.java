@@ -48,6 +48,7 @@ public class ACOSolver {
     private Solution bestSolution;
     private double bestFitness;
     private int iteration;
+    private int iterationsRun;
 
     // Estadisticas
     private final List<Double> fitnessHistory;
@@ -74,6 +75,7 @@ public class ACOSolver {
         fitnessHistory.clear();
         avgFitnessHistory.clear();
         improvementCount = 0;
+        iterationsRun = 0;
         System.out.println("=== ACO (Ant Colony Optimization) started ===");
         System.out.printf("Planning requests: %d, Airports: %d, Flight schedules: %d, Ants: %d%n",
                 requests.size(), network.getAirportCount(), network.getFlightCount(),
@@ -151,6 +153,12 @@ public class ACOSolver {
             // Registrar estadisticas
             fitnessHistory.add(bestFitness);
             avgFitnessHistory.add(fitnessSum / config.getAntCount());
+            iterationsRun = iteration;
+
+            if (bestFitness <= 0.0) {
+                System.out.println("Optimal solution reached at iteration " + iteration);
+                break;
+            }
 
             // Log periodico
             if (iteration % 50 == 0) {
@@ -162,7 +170,7 @@ public class ACOSolver {
         }
 
         if (bestSolution != null
-                && Boolean.parseBoolean(System.getProperty("tasf.repairWarehouse", "false"))) {
+                && Boolean.parseBoolean(System.getProperty("tasf.repairWarehouse", "true"))) {
             WarehouseRepair repair = new WarehouseRepair(network, config);
             Solution repaired = repair.repair(bestSolution);
             if (repaired != null && repaired.getFitness() < bestFitness) {
@@ -176,7 +184,7 @@ public class ACOSolver {
         long elapsed = System.currentTimeMillis() - startTimeMs;
         System.out.println("=== ACO finished ===");
         System.out.printf("Iterations: %d, Improvements: %d, Time: %d ms%n",
-                iteration - 1, improvementCount, elapsed);
+                getIterationsRun(), improvementCount, elapsed);
         if (bestSolution != null) {
             System.out.println("Best solution: " + bestSolution);
             System.out.println("Semaphore status: " + getSemaphoreStatus(bestSolution));
@@ -199,6 +207,7 @@ public class ACOSolver {
         fitnessHistory.clear();
         avgFitnessHistory.clear();
         improvementCount = 0;
+        iterationsRun = 0;
         network.cancelFlight(cancelledFlightId);
 
         // Contar rutas afectadas
@@ -248,6 +257,7 @@ public class ACOSolver {
                 fitnessHistory.add(bestFitness);
                 avgFitnessHistory.add(fitnessSum / config.getAntCount());
             }
+            iterationsRun = iteration;
         }
 
         if (bestSolution != null) {
@@ -279,7 +289,7 @@ public class ACOSolver {
     }
 
     public int getImprovementCount() { return improvementCount; }
-    public int getIterationsRun() { return iteration - 1; }
+    public int getIterationsRun() { return iterationsRun; }
 
     private boolean isTimeLimitReached() {
         return (System.currentTimeMillis() - startTimeMs) >= config.getTimeLimitMs();
